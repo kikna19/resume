@@ -1,0 +1,157 @@
+<mat-toolbar-row class="main">
+  <div class="moon">
+    <span class="shadow"></span>
+    <div></div>
+  </div>
+  <nav class="nav" #nav>
+    <div>
+      <audio #m>
+        <source src="assets/02%20Marooned%201.mp3" type="audio/mpeg">
+      </audio>
+      <fa-icon [icon]="moon" (click)="m.pause()"></fa-icon>
+    </div>
+    <div>
+      <main>
+        <h3 (click)="goWorks()" (mouseenter)="enterAnimation($event,item)" (mouseleave)="leaveAnimation($event,item)">
+          work</h3>
+        <span #item></span>
+      </main>
+      <main>
+        <h3 (click)="goSkills()" (mouseenter)="enterAnimation($event,item2)"
+            (mouseleave)="leaveAnimation($event,item2)">skill</h3>
+        <span #item2></span>
+      </main>
+      <main>
+        <h3 (click)="goAbout()" (mouseenter)="enterAnimation($event,item3)" (mouseleave)="leaveAnimation($event,item3)">
+          about</h3>
+        <span #item3></span>
+      </main>
+      <main>
+        <h3 (click)="goContact()" (mouseenter)="enterAnimation($event,item4)"
+            (mouseleave)="leaveAnimation($event,item4)">contact</h3>
+        <span #item4></span>
+      </main>
+    </div>
+  </nav>
+  <main #mainText>
+    <h2 class="main-text">Hello, I am Vazha Kiknadze,
+      Junior Angular Developer.
+      At this site you can learn about my skills. I am hardworking,
+      I love new challenges and difficulties, and solving them with new methods,
+      which is a necessary charm of programming. <span>#loveprogramming<i class="material-icons">favorite</i></span>
+    </h2>
+  </main>
+</mat-toolbar-row>
+<section class="work-header">
+  <h2>work</h2>
+</section>
+<mat-toolbar-row class="work" #works>
+  <figure>
+    <img src="assets/3532709.png">
+    <div #line></div>
+    <a href="https://laqua-lq.web.app" target="_blank">
+      <main #work>
+        <p>laqua</p>
+      </main>
+    </a>
+  </figure>
+  <figure>
+    <img src="assets/3532709.png">
+    <div #line2></div>
+    <a href="https://weather-app-wpp.web.app" target="_blank">
+      <main #work2>
+        <p>weather app</p>
+      </main>
+    </a>
+  </figure>
+  <figure>
+    <img src="assets/3532709.png">
+    <div #line3></div>
+    <a href="https://forum-geo.web.app" target="_blank">
+      <main #work3>
+        <p>forum</p>
+      </main>
+    </a>
+  </figure>
+  <figure>
+    <img src="assets/3532709.png">
+    <div #line4></div>
+    <a href="https://fire-game.vercel.app" target="_blank">
+      <main #work4>
+        <p>fire game</p>
+      </main>
+    </a>
+  </figure>
+  <figure>
+    <img src="assets/3532709.png">
+    <div #line5></div>
+    <a href="https://cart-41oxtv4ps-kikna19.vercel.app" target="_blank">
+      <main #work5>
+        <p>shopping cart</p>
+      </main>
+    </a>
+  </figure>
+</mat-toolbar-row>
+<section class="skill-header">
+  <h2>skill</h2>
+</section>
+<mat-toolbar-row class="skill" #skills>
+  <article>
+    <div matRipple class="mat-elevation-z4" matRippleColor="white" (click)="selectedOne()">1<sup>st</sup> technologies
+    </div>
+    <div matRipple class="mat-elevation-z4" matRippleColor="white" (click)="selectedTwo()">2<sup>rd</sup> markups</div>
+    <div matRipple class="mat-elevation-z4" matRippleColor="white" (click)="selectedThree()">3<sup>rd</sup> plugins
+    </div>
+  </article>
+  <article class="list">
+    <mat-chip-list multiple>
+      <mat-chip #chip [selected]="selectOne">angular</mat-chip>
+      <mat-chip #chip2 [selected]="selectOne">javascript</mat-chip>
+      <mat-chip #chip3 [selected]="selectOne">typescript</mat-chip>
+      <mat-chip #chip4 [selected]="selectOne">rxjs</mat-chip>
+      <mat-chip #chip5 [selected]="selectTwo">html5</mat-chip>
+      <mat-chip #chip6 [selected]="selectTwo">css3</mat-chip>
+      <mat-chip #chip7 [selected]="selectTwo">scss</mat-chip>
+      <mat-chip #chip8 [selected]="selectThree">angular material</mat-chip>
+      <mat-chip #chip9 [selected]="selectThree">greensock</mat-chip>
+      <mat-chip #chip10 [selected]="selectThree">git</mat-chip>
+    </mat-chip-list>
+  </article>
+</mat-toolbar-row>
+<mat-toolbar-row class="about" #about>
+  <main>
+    <h2>about me</h2>
+    <div>
+      <i class="material-icons">sports_soccer</i>
+      <span>football</span>
+    </div>
+    <div>
+      <i class="fas fa-chess-knight"></i>
+      <span>chess</span>
+    </div>
+    <div>
+      <i class="material-icons">audiotrack</i>
+      <span>music</span>
+    </div>
+  </main>
+
+</mat-toolbar-row>
+<mat-toolbar-row class="contact" #contact>
+  <main>
+    <h2>get in touch</h2>
+    <form>
+      <a>
+        <fa-icon [icon]="facebook"></fa-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/kikna-vaja-8552b71ab/" target="_blank">
+        <fa-icon [icon]="linkedin"></fa-icon>
+      </a>
+      <fa-icon (click)="mailTo()" [icon]="gmail"></fa-icon>
+      <a href="https://github.com/kikna19" target="_blank">
+        <fa-icon [icon]="github"></fa-icon>
+      </a>
+    </form>
+  </main>
+</mat-toolbar-row>
+
+
